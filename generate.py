@@ -177,7 +177,7 @@ so make other sections like that and donot forget to return them under this tag
             st.session_state.messages = updated_messages
 
             # Force rerun to show chat interface
-            st.experimental_rerun()
+            st.rerun()
 
     # Chat Interface Stage
     if st.session_state.stage == 'chat':

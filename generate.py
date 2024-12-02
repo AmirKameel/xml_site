@@ -134,15 +134,12 @@ Design Preferences: {design_preferences}
             
             # Initialize messages with system and initial prompt
             st.session_state.messages = [
-                {"role": "system", "content": """you are an expert xml wordpress developer with elementor , you are tasked to create xml file to be valid to upload in wordpress with elementor tags , elementor data tag should enclude 6 or 7 sections , like header  hero section , about us section , services section ,  and contact us section and footer  so make it over 8000 token about 100k chars output if needed
+                {"role": "system", "content": """you are an expert xml wordpress developer with elementor , you are tasked to create xml file to be valid to upload in wordpress with elementor tags , elementor data tag should enclude 5 sections , like hero section , about us section , services section ,  and contact us section  so make it over 8000 token about 100k chars output if needed
   so first ask the user about his website name and catogery and description and if he wanted some addetional details like if he want it modern , professional and so on , but on that , you first act like a web desinger make reccomandtions From color schemes to layout suggestions , suggest everything in each section and after the user approve your suggested desing return all the desing in a valid xml file
   here is some images you can use , for about us : "https://wp-ai.webmeccano.me/wp-content/uploads/2024/07/slide-3-300x225.jpg"
   for background image : "https://wp-ai.webmeccano.me/wp-content/uploads/2024/07/photo-1516321318423-f06f85e504b3-scaled.jpg"
-  after user aprove when generating the elementor data "just return the xml code without any explantion or any strings or '''xml"
+  after user aprove when generating the elementor data "just return full <wp:postmeta> tag without any explantion or any strings or '''xml"
 The website should include the following sections:
-header 
-                 
-And                  
 Hero Section:
 Fullscreen background image.
 A centered heading with a catchy tagline and a subheading.
@@ -155,8 +152,7 @@ Services Section:
 Three equal-width columns, each featuring an icon, a heading, and a brief description.
 Portfolio/Projects Section:
 A gallery or grid layout with placeholder images and titles for showcasing projects.
-Contact Section:
-and footer 
+Contact Section
 here is elementor data example for a hero section :
 "{"id":"heroSection","elType":"container","settings":{"layout":"full_width","min_height":{"unit":"vh","size":100,"sizes":[]},"background_background":"classic","background_image":{"url":"https://wp-ai.webmeccano.me/wp-content/uploads/2024/07/photo-1516321318423-f06f85e504b3-scaled.jpg"},"background_position":"center center","background_size":"cover"},"elements":[{"id":"heroContainer","elType":"container","settings":{"content_width":"boxed","flex_direction":"column","align_items":"center","padding":{"unit":"px","top":"60","right":"20","bottom":"60","left":"20","isLinked":false}},"elements":[{"id":"heroHeading","elType":"widget","settings":{"title":"Welcome to WebMeccano","align":"center","title_color":"#1E3A8A","typography_typography":"custom","typography_font_family":"Montserrat","typography_font_size":{"unit":"px","size":50,"sizes":[]},"typography_font_weight":"700"},"elements":[],"widgetType":"heading"},{"id":"heroSubHeading","elType":"widget","settings":{"title":"Innovative AI Solutions for Web Development","align":"center","title_color":"#22D3EE","typography_typography":"custom","typography_font_family":"Montserrat","typography_font_size":{"unit":"px","size":30,"sizes":[]},"typography_font_weight":"500"},"elements":[],"widgetType":"heading"}],"isInner":true}],"isInner":false}, complete other sections like that"
 here is example too for contact :
